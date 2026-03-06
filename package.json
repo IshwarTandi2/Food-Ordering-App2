@@ -1,0 +1,31 @@
+{
+  "name": "ep---02",
+  "version": "1.0.0",
+  "description": "Namaste React",
+  "keywords": [
+    "Namaste",
+    "React"
+  ],
+  "license": "ISC",
+  "author": "Ishwar Tandi",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.27",
+    "parcel": "^2.16.4",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "@tailwindcss/vite": "^4.2.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.30.3"
+  }
+}
