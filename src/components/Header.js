@@ -3,8 +3,12 @@ import { useState, useContext } from "react";
 import UserContext from "../utils/UserContext";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 const Header = ()=>{
  const[btnName,setbtnName] = useState("Log in");
+ const cartItems = useSelector((store)=>
+  store.cart.items);
+
  
 
 const onlineStatus = useOnlineStatus();
@@ -22,7 +26,7 @@ const onlineStatus = useOnlineStatus();
                 <li className=" mx-4 mr-10 hover:text-orange-600"><Link to="/about">About us</Link></li>
                 <li className=" mx-4 mr-10 hover:text-orange-600"><Link to="/contact"> Contact us</Link></li>
                 <li className=" mx-4 mr-10 hover:text-orange-600"><Link to="/grocery"> Grocery</Link></li>
-                <li className=" mx-4 mr-10 hover:text-orange-600 cursor-pointer">Cart</li>
+                <li className=" mx-4 mr-10 hover:text-orange-600 cursor-pointer">Cart-({cartItems.length } items)</li>
                
                 <button className="login-btn hover:text-orange-600" onClick={()=>{
                   btnName === "Log in"?setbtnName("Log out"):setbtnName("Log in") ;                   

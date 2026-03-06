@@ -6,6 +6,8 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 // import AboutClass from "./components/AboutClass";
 
@@ -14,10 +16,17 @@ const AboutClass = lazy(() => import("./components/AboutClass"));
 
 const AppLayout = () => {
      return (
+         <Provider store={appStore}>
           <div className="app-layout">
                <Header />
                <Outlet />
-          </div>
+          </div> </Provider>
+
+     // <div className="app-layout">
+     //            <Header />
+     //           <Outlet />
+     //           </div>
+          
      )
 }
 
