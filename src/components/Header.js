@@ -1,6 +1,6 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState, useContext } from "react";
-import UserContext from "../utils/UserContext";
+import { useState } from "react";
+// import UserContext from "../utils/UserContext";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { useSelector } from "react-redux";
@@ -31,6 +31,8 @@ const onlineStatus = useOnlineStatus();
                 <button className="login-btn hover:text-orange-600" onClick={()=>{
                   btnName === "Log in"?setbtnName("Log out"):setbtnName("Log in") ;                   
                 }} >{btnName}</button>
+             
+
 
                </ul>
 

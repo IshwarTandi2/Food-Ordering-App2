@@ -30,4 +30,12 @@
     -Install @babel/preset-react - to make JSX works in test cases
     -Include @babel/preset-react inside my babel config
     -Install @testing-library/jest-dom
+    - 3 steps for writing test
+      1.render(jsdom)
+      2.Quering
+      3.Assertion
+
+
+
+
     

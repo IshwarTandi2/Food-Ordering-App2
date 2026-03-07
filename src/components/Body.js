@@ -23,10 +23,9 @@ const Body = () => {
           //optional chaining
           setlistOfRest(jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
           setfilteredRest(jsonValue?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        
+          
      }
-     // console.log(listOfRest);
-     // console.log(listOfRest[0]?.info?.aggregatedDiscountInfoV3?.header);
+     
      
      const onlineStatus = useOnlineStatus();
      if(onlineStatus===false){
